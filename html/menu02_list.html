@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>비대면 사실조사 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contents.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <section class="header">
+            <h1>비대면 사실조사 시스템</h1>
+            <ul class="gnb_menu">
+                <li class="active"><a href="">비대면사실조사결과확인</a></li> <!-- D:활성화시 class[active] add -->
+                <li><a href="">세대정보확인결과</a></li>
+                <li><a href="">서비스현황</a></li>
+                <li><a href="">비대면 사실조사 통계</a></li>
+                <li><a href="">개인정보 열람 현황</a></li>
+                <li><a href="">업무처리현황</a></li>
+                <li><a href="">관리자업무</a></li>
+            </ul>
+            <div class="box_user-wrap">
+                <div class="box_manager-group">
+                    <p class="box_manager-name"><i class="ico_com"></i>담당자 :김담당</p>
+                    <ul class="box_manager-info">
+                        <li>관할구역 :세종특별자치시 조치원읍</li>
+                        <li>부서 :조치원읍</li>
+                    </ul>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_setting"><i class="ico_com"></i>자동종료설정</button>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_logout"><i class="ico_com"></i>로그아웃</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lnb_menu">
+                <p class="lnb_tit">비대면 사실조사 결과확인</p>
+                <ul class="lnb_menu-list">
+                    <li class="list_item is-active"> <!-- D: 선택되었을 떼 class[is-active] add -->
+                        <span class="link_menu">서비스정보관리</span>
+                        <ul class="depth_list" style="display:block">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li class="is-active"><a href="">4Depth menu</a></li> <!-- D: 선택되었을 떼 class[is-active] add -->
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu">서비스 현황</span>
+                        <ul class="depth_list">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="depth_list-btn">연령별 현황</button></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성년/미성년별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">연계기관 연동현황</a></li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">모바일게시판관리</a></span>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">시스템관리</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contents_inner">
+                <div class="box_bread-crumb">
+                    <h2 class="tit_type1">비대면 사실조사 결과확인</h2>
+                    <ul class="bread_crumb">
+                        <li class="home">비대면 사실조사 시스템</li>
+                        <li class="current">연령별 현황</li>
+                    </ul>
+                    <button type="button" class="align-right btn_basic3">목록</button>
+                </div>
+
+                <article class="bbs_form-content">
+                    <p class="txt_sub-tit">검색조건</p>
+                    <div class="box_search-table">
+                        <table class="search_table">
+                        <colgroup>
+                            <col style="width:70px">
+                            <col>
+                            <col style="width:70px">
+                            <col style="width:16%">
+                            <col style="width:70px">
+                            <col style="width:16%">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>등록일자<i class="ico_com ico_date-arrow"></i></th>
+                            <td>
+                                <div class="box_datepicker-wrap">
+                                    <input type="text" value="2021-06-30">
+                                    <span class="line">~</span>
+                                    <input type="text" value="2021-06-30" disabled>
+                                    <div class="btn_datepicker-wrap">
+                                        <button type="button" class="btn_basic3">일주일</button>
+                                        <button type="button" class="btn_basic3">1개월</button>
+                                        <button type="button" class="btn_basic3">3개월</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>생년월일</th>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <th>성명</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>행정기관</th>
+                            <td>
+                                <div class="sel_wrap">
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                    <span class="sel">
+                                        <select>
+                                            <option selected="selected">전체</option>
+                                            <option>1호</option>
+                                            <option>2호</option>
+                                        </select>
+                                    </span>
+                                </div>
+                            </td>
+                            <th>증상태</th>
+                            <td>
+                                <span class="sel block">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                            <th>결과</th>
+                            <td>
+                                <span class="sel block">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>서비스 상태</th>
+                            <td colspan="5">
+                                <span class="sel">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="search_btn-wrap">
+                        <button type="button" class="btn_basic3">Excel</button>
+                        <button type="button" class="btn_basic3">Excel(전체)</button>
+                        <button type="button" class="btn_basic2">초기화</button>
+                        <button type="button" class="btn_basic1 btn_search"><i class="ico_com"></i>조회</button>
+                    </div>
+                </article>
+
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:6%;">
+                            <col style="width:12%">
+                            <col style="width:8%;">
+                            <col style="width:10%">
+                            <col>
+                            <col style="width:8%;">
+                            <col style="width:6%;">
+                            <col style="width:10%;">
+                            <col style="width:8%;">
+                            <col style="width:10%;">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>주민등록번호</th>
+                            <th>성명</th>
+                            <th>발급일자</th>
+                            <th>행정기관(주거지기준)</th>
+                            <th>증상태</th>
+                            <th>결과</th>
+                            <th>서비스상태</th>
+                            <th>등록일자</th>
+                            <th>최종처리일자</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1120</td>
+                            <td>881012-1******</td>
+                            <td>김길동</td>
+                            <td>2000-0101</td>
+                            <td class="align-l">세통특별자치시</td>
+                            <td>정상</td>
+                            <td>성공</td>
+                            <td>해지</td>
+                            <td>2021-07-26</td>
+                            <td>2021-07-27</td>
+                        </tr>
+                        <tr>
+                            <td>1120</td>
+                            <td>881012-1******</td>
+                            <td>김길동</td>
+                            <td>2000-0101</td>
+                            <td class="align-l">세통특별자치시</td>
+                            <td>정상</td>
+                            <td>성공</td>
+                            <td>일시정지</td>
+                            <td>2021-07-26</td>
+                            <td>2021-07-27</td>
+                        </tr>
+                        <tr>
+                            <td>1120</td>
+                            <td>881012-1******</td>
+                            <td>김길동</td>
+                            <td>2000-0101</td>
+                            <td class="align-l">세통특별자치시</td>
+                            <td>정상</td>
+                            <td>성공</td>
+                            <td>등록</td>
+                            <td>2021-07-26</td>
+                            <td>2021-07-27</td>
+                        </tr>
+                        <!-- S:등록된 데이터가 없을 경우 -->
+                        <tr>
+                            <td colspan="10" class="no-data">등록된 데이터가 없습니다.</td>
+                        </tr>
+                        <!-- E:등록된 데이터가 없을 경우 -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
