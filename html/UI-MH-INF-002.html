@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>비대면 사실조사 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <section class="header">
+            <h1>비대면 사실조사 시스템</h1>
+            <ul class="gnb_menu">
+                <li class="active"><a href="">비대면사실조사결과확인</a></li> <!-- D:활성화시 class[active] add -->
+                <li><a href="">세대정보확인결과</a></li>
+                <li><a href="">서비스현황</a></li>
+                <li><a href="">비대면 사실조사 통계</a></li>
+                <li><a href="">개인정보 열람 현황</a></li>
+                <li><a href="">업무처리현황</a></li>
+                <li><a href="">관리자업무</a></li>
+            </ul>
+            <div class="box_user-wrap">
+                <div class="box_manager-group">
+                    <p class="box_manager-name"><i class="ico_com"></i>담당자 :김담당</p>
+                    <ul class="box_manager-info">
+                        <li>관할구역 :세종특별자치시 조치원읍</li>
+                        <li>부서 :조치원읍</li>
+                    </ul>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_setting"><i class="ico_com"></i>자동종료설정</button>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_logout"><i class="ico_com"></i>로그아웃</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lnb_menu">
+                <p class="lnb_tit">비대면 사실조사 결과확인</p>
+                <ul class="lnb_menu-list">
+                    <li class="list_item is-active"> <!-- D: 선택되었을 떼 class[is-active] add -->
+                        <span class="link_menu">서비스정보관리</span>
+                        <ul class="depth_list" style="display:block">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li class="is-active"><a href="">4Depth menu</a></li> <!-- D: 선택되었을 떼 class[is-active] add -->
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu">서비스 현황</span>
+                        <ul class="depth_list">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="depth_list-btn">연령별 현황</button></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성년/미성년별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">연계기관 연동현황</a></li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">모바일게시판관리</a></span>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">시스템관리</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contents_inner">
+                <div class="box_bread-crumb">
+                    <h2 class="tit_type1">비대면 사실조사 결과확인 상세</h2>
+                    <ul class="bread_crumb">
+                        <li class="home">비대면 사실조사 시스템</li>
+                        <li>비대면 사실조사 결과확인</li>
+                        <li class="current">상세</li>
+                    </ul>
+                    <button type="button" class="align-right btn_basic3">목록</button>
+                </div>
+
+                <p class="txt_sub-tit">기본정보</p>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>주민등록번호</th>
+                            <td>550101-1870912</td>
+                            <th>성명</th>
+                            <td>홍길동</td>
+                        </tr>
+                        <tr>
+                            <th>증발급일자</th>
+                            <td>2020-01-01</td>
+                            <th>행정기관</th>
+                            <td>세종특별자치시</td>
+                        </tr>
+                        <tr>
+                            <th>증상태</th>
+                            <td>정상</td>
+                            <th>현주소</th>
+                            <td>세종특별자치시 도렴동 홍길동 아파트 101동 1111호</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+
+                <p class="txt_sub-tit">서비스정보</p>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>증연계이력</th>
+                            <td>2021-07-26</td>
+                            <th>해지일자</th>
+                            <td>-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+
+                <p class="txt_sub-tit">증연계이력</p>
+                <!-- bbs -->
+                <div class="bbs_area">
+                    <table class="bbs">
+                        <colgroup>
+                            <col style="width:8%;">
+                            <col style="width:15%">
+                            <col style="width:10%;">
+                            <col style="width:10%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>처리일자</th>
+                            <th>서비스상태</th>
+                            <th>인증결과</th>
+                            <th>연계설명</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>7</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2021-07-31 09:00:00</td>
+                            <td>해지</td>
+                            <td>성공</td>
+                            <td class="align-l">이용기관코드 오류</td>
+                        </tr>
+                        <!-- S:등록된 데이터가 없을 경우 -->
+                        <tr>
+                            <td colspan="5" class="no-data">등록된 데이터가 없습니다.</td>
+                        </tr>
+                        <!-- E:등록된 데이터가 없을 경우 -->
+                        </tbody>
+                    </table>
+
+                    <!-- 페이징 -->
+                    <div class="bbs_page">
+                        <button type="button" class="btn_page first">처음</button>
+                        <button type="button" class="btn_page prev">이전</button>
+                        <span class="paging_group">
+                            <button type="button" class="btn_page">1</button>
+                            <button type="button" class="btn_page">2</button>
+                            <button type="button" class="btn_page active">3</button>
+                            <button type="button" class="btn_page">4</button>
+                            <button type="button" class="btn_page">5</button>
+                            <button type="button" class="btn_page">6</button>
+                            <button type="button" class="btn_page">7</button>
+                            <button type="button" class="btn_page">8</button>
+                            <button type="button" class="btn_page">9</button>
+                            <button type="button" class="btn_page">10</button>
+                        </span>
+                        <button type="button" class="btn_page next">다음</button>
+                        <button type="button" class="btn_page last">끝</button>
+                    </div>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

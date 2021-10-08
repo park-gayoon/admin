@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>비대면 사실조사 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <section class="header">
+            <h1>비대면 사실조사 시스템</h1>
+            <ul class="gnb_menu">
+                <li class="active"><a href="">비대면사실조사결과확인</a></li> <!-- D:활성화시 class[active] add -->
+                <li><a href="">세대정보확인결과</a></li>
+                <li><a href="">서비스현황</a></li>
+                <li><a href="">비대면 사실조사 통계</a></li>
+                <li><a href="">개인정보 열람 현황</a></li>
+                <li><a href="">업무처리현황</a></li>
+                <li><a href="">관리자업무</a></li>
+            </ul>
+            <div class="box_user-wrap">
+                <div class="box_manager-group">
+                    <p class="box_manager-name"><i class="ico_com"></i>담당자 :김담당</p>
+                    <ul class="box_manager-info">
+                        <li>관할구역 :세종특별자치시 조치원읍</li>
+                        <li>부서 :조치원읍</li>
+                    </ul>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_setting"><i class="ico_com"></i>자동종료설정</button>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_logout"><i class="ico_com"></i>로그아웃</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lnb_menu">
+                <p class="lnb_tit">비대면 사실조사 결과확인</p>
+                <ul class="lnb_menu-list">
+                    <li class="list_item is-active"> <!-- D: 선택되었을 떼 class[is-active] add -->
+                        <span class="link_menu">서비스정보관리</span>
+                        <ul class="depth_list" style="display:block">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li class="is-active"><a href="">4Depth menu</a></li> <!-- D: 선택되었을 떼 class[is-active] add -->
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu">서비스 현황</span>
+                        <ul class="depth_list">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="depth_list-btn">연령별 현황</button></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성년/미성년별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">연계기관 연동현황</a></li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">모바일게시판관리</a></span>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">시스템관리</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contents_inner">
+                <div class="box_bread-crumb">
+                    <h2 class="tit_type1">활용처 등록/수정</h2>
+                    <ul class="bread_crumb">
+                        <li class="home">비대면 사실조사 시스템</li>
+                        <li>비대면 사실조사 결과확인</li>
+                        <li class="current">활용처관리 등록/수정</li>
+                    </ul>
+                    <button type="button" class="align-right btn_basic3">목록</button>
+                </div>
+
+                <p class="txt_sub-tit">기본정보</p>
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>활용처명<span class="ico-essential">*</span></th>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <th>표시여부<span class="ico-essential">*</span></th>
+                            <td>
+                                <label class="radio">
+                                    <input type="radio" name="termType" checked>
+                                    <span>표시</span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="termType">
+                                    <span>표시안함</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>안내문구<span class="ico-essential">*</span></th>
+                            <td colspan="3">
+                                <div class="box_form">
+                                    <input type="text">
+                                    <span class="txt_desc">0/100byte</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>로고<span class="ico-essential">*</span></th>
+                            <td colspan="3">
+                                <div class="box_file-upload">
+                                    <button type="button" class="btn_basic3 small">파일첨부</button>
+                                    <span class="txt_noti">첨부가능 파일형식: jpg, gif, png / 최대용량: 3MB</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>로고<span class="ico-essential">*</span></th>
+                            <td colspan="3">
+                                <div class="box_file-data">
+                                    <span class="txt">첨부파일입니다.jpg<span class="data">(0KB/3MB)</span></span>
+                                    <button type="button" class="btn_delete"></button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="txt_sub-tit">시스템정보</p>
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>작업자</th>
+                            <td>홍길동</td>
+                            <th>작업일자</th>
+                            <td>2021-06-30</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="btn_wrap">
+                    <button type="button" class="btn_basic3">취소</button>
+                    <button type="button" class="btn_basic1">저장</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

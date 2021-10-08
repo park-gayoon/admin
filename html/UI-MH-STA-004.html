@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>비대면 사실조사 시스템</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="layout_wrap">
+        <section class="header">
+            <h1>비대면 사실조사 시스템</h1>
+            <ul class="gnb_menu">
+                <li class="active"><a href="">비대면사실조사결과확인</a></li> <!-- D:활성화시 class[active] add -->
+                <li><a href="">세대정보확인결과</a></li>
+                <li><a href="">서비스현황</a></li>
+                <li><a href="">비대면 사실조사 통계</a></li>
+                <li><a href="">개인정보 열람 현황</a></li>
+                <li><a href="">업무처리현황</a></li>
+                <li><a href="">관리자업무</a></li>
+            </ul>
+            <div class="box_user-wrap">
+                <div class="box_manager-group">
+                    <p class="box_manager-name"><i class="ico_com"></i>담당자 :김담당</p>
+                    <ul class="box_manager-info">
+                        <li>관할구역 :세종특별자치시 조치원읍</li>
+                        <li>부서 :조치원읍</li>
+                    </ul>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_setting"><i class="ico_com"></i>자동종료설정</button>
+                </div>
+                <div class="box_button">
+                    <button type="button" class="btn_logout"><i class="ico_com"></i>로그아웃</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lnb_menu">
+                <p class="lnb_tit">비대면 사실조사 결과확인</p>
+                <ul class="lnb_menu-list">
+                    <li class="list_item is-active"> <!-- D: 선택되었을 떼 class[is-active] add -->
+                        <span class="link_menu">서비스정보관리</span>
+                        <ul class="depth_list" style="display:block">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li class="is-active"><a href="">4Depth menu</a></li> <!-- D: 선택되었을 떼 class[is-active] add -->
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu">서비스 현황</span>
+                        <ul class="depth_list">
+                            <li>
+                                <a href="" class="depth_list-btn">일자별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">행정기관별 현황</a></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><button type="button" class="depth_list-btn">연령별 현황</button></li>
+                            <li>
+                                <a href="" class="depth_list-btn">성년/미성년별 현황</a>
+                                <ul>
+                                    <li><a href="">4Depth menu</a></li>
+                                    <li><a href="">4Depth menu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" class="depth_list-btn">연계기관 연동현황</a></li>
+                        </ul>
+                        <button type="button" class="btn_depth"><span class="blind">하위메뉴 버튼</span></button>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">모바일게시판관리</a></span>
+                    </li>
+                    <li class="list_item">
+                        <span class="link_menu"><a href="">시스템관리</a></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contents_inner">
+                <div class="box_bread-crumb">
+                    <h2 class="tit_type1">연령별 현황</h2>
+                    <ul class="bread_crumb">
+                        <li class="home">비대면 사실조사 시스템</li>
+                        <li>비대면 사실조사 결과확인</li>
+                        <li class="current">연령별 현황</li>
+                    </ul>
+                    <button type="button" class="align-right btn_basic3">목록</button>
+                </div>
+
+                <article class="bbs_form-content">
+                    <p class="txt_sub-tit">검색조건</p>
+                    <div class="box_search-table">
+                        <table class="search_table">
+                        <colgroup>
+                            <col style="width:70px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>행정기관</th>
+                            <td>
+                                <span class="sel type3">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                                <span class="sel type3">
+                                    <select>
+                                        <option selected="selected">전체</option>
+                                        <option>1호</option>
+                                        <option>2호</option>
+                                    </select>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <div class="box_form">
+                                    <div class="box_radio-group">
+                                        <label class="radio">
+                                            <input type="radio" name="termType" checked="checked">
+                                            <span>일별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType">
+                                            <span>월별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType">
+                                            <span>년별</span>
+                                        </label>
+                                    </div>
+                                    <div class="box_datepicker-wrap">
+                                        <span class="datepicker_box">
+                                            <input type="text" name="" value="" placeholder="날짜선택" class="datepicker">
+                                        </span>
+                                        <span class="line">~</span>
+                                        <span class="datepicker_box disabled">
+                                            <input type="text" name="" value="" placeholder="날짜선택" class="datepicker" readonly="readonly">
+                                        </span>
+                                        <div class="btn_datepicker-wrap">
+                                            <button type="button" class="btn_basic3">일주일</button>
+                                            <button type="button" class="btn_basic3">1개월</button>
+                                            <button type="button" class="btn_basic3">3개월</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <div class="box_form">
+                                    <div class="box_radio-group">
+                                        <label class="radio">
+                                            <input type="radio" name="termType2">
+                                            <span>일별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType2" checked="checked">
+                                            <span>월별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType2">
+                                            <span>년별</span>
+                                        </label>
+                                    </div>
+                                    <div class="box_sel-group">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>2021-07</option>
+                                                <option>2021-07</option>
+                                            </select>
+                                        </span>
+                                        <span class="line">~</span>
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>2021-07</option>
+                                                <option>2021-07</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td>
+                                <div class="box_form">
+                                    <div class="box_radio-group">
+                                        <label class="radio">
+                                            <input type="radio" name="termType3">
+                                            <span>일별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType3">
+                                            <span>월별</span>
+                                        </label>
+                                        <label class="radio">
+                                            <input type="radio" name="termType3" checked="checked">
+                                            <span>년별</span>
+                                        </label>
+                                    </div>
+                                    <div class="box_sel-group">
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                            </select>
+                                        </span>
+                                        <span class="line">~</span>
+                                        <span class="sel">
+                                            <select>
+                                                <option selected="selected">전체</option>
+                                                <option>2021</option>
+                                                <option>2020</option>
+                                            </select>
+                                        </span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="search_btn-wrap">
+                        <button type="button" class="btn_basic3">Excel</button>
+                        <button type="button" class="btn_basic3">Excel(전체)</button>
+                        <button type="button" class="btn_basic2">초기화</button>
+                        <button type="button" class="btn_basic1 btn_search"><i class="ico_com"></i>조회</button>
+                    </div>
+                </article>
+
+                <!-- bbs -->
+                <div class="bbs_area type2">
+                    <table class="bbs type2">
+                        <colgroup>
+                            <col style="width:8%">
+                            <col style="width:10%">
+                            <col>
+                            <col style="width:5%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:5%">
+                            <col>
+                            <col style="width:5%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:5%">
+                            <col>
+                            <col style="width:5%">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col style="width:5%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th rowspan="2">기간</th>
+                            <th rowspan="2">행정기관</th>
+                            <th colspan="7">합계</th>
+                            <th colspan="7">등록</th>
+                            <th colspan="7">삭제</th>
+                        </tr>
+                        <tr>
+                            <th>계</th>
+                            <th>20세이하</th>
+                            <th>20대</th>
+                            <th>30대</th>
+                            <th>40대</th>
+                            <th>50대</th>
+                            <th>60세이상</th>
+                            <th>계</th>
+                            <th>20세이하</th>
+                            <th>20대</th>
+                            <th>30대</th>
+                            <th>40대</th>
+                            <th>50대</th>
+                            <th>60세이상</th>
+                            <th>계</th>
+                            <th>20세이하</th>
+                            <th>20대</th>
+                            <th>30대</th>
+                            <th>40대</th>
+                            <th>50대</th>
+                            <th>60세이상</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="total_section">
+                            <td colspan="2" class="no_line">총계</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="no_line">2021-07-29</td>
+                            <td>서울특별시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td>세종특별자치시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr class="total-item">
+                            <td>소계</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="no_line">2021-07-29</td>
+                            <td>서울특별시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td>세종특별자치시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr class="total-item">
+                            <td>소계</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3" class="no_line">2021-07-29</td>
+                            <td>서울특별시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr>
+                            <td>세종특별자치시</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        <tr class="total-item">
+                            <td>소계</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                            <td>6,020</td>
+                            <td>7,264</td>
+                            <td>39,858</td>
+                            <td>39,858</td>
+                            <td>7,264</td>
+                            <td>6,020</td>
+                            <td>39,858</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //bbs -->
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>

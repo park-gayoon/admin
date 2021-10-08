@@ -6,6 +6,7 @@
     <title>비대면 사실조사 시스템</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/common.js"></script>
@@ -107,81 +108,29 @@
 
             <div class="contents_inner">
                 <div class="box_bread-crumb">
-                    <h2 class="tit_type1">비대면 사실조사 결과확인</h2>
+                    <h2 class="tit_type1">활용처 등록/수정</h2>
                     <ul class="bread_crumb">
                         <li class="home">비대면 사실조사 시스템</li>
-                        <li class="current">연령별 현황</li>
+                        <li>비대면 사실조사 결과확인</li>
+                        <li class="current">활용처관리 등록/수정</li>
                     </ul>
                     <button type="button" class="align-right btn_basic3">목록</button>
                 </div>
 
-                <article class="bbs_form-content">
-                    <p class="txt_sub-tit">검색조건</p>
-                    <div class="box_search-table">
-                        <table class="search_table">
+                <p class="txt_sub-tit">기본정보</p>
+                <div class="bbs_area">
+                    <table class="bbs view">
                         <colgroup>
-                            <col style="width:70px">
+                            <col style="width:12%;">
                             <col>
-                            <col style="width:70px">
-                            <col style="width:16%">
-                            <col style="width:70px">
-                            <col style="width:16%">
+                            <col style="width:12%;">
+                            <col>
                         </colgroup>
                         <tbody>
                         <tr>
-                            <th>등록일자<i class="ico_com ico_date-arrow"></i></th>
-                            <td>
-                                <div class="box_datepicker-wrap">
-                                    <input type="text" value="2021-06-30">
-                                    <span class="line">~</span>
-                                    <input type="text" value="2021-06-30" disabled>
-                                    <div class="btn_datepicker-wrap">
-                                        <button type="button" class="btn_basic3">일주일</button>
-                                        <button type="button" class="btn_basic3">1개월</button>
-                                        <button type="button" class="btn_basic3">3개월</button>
-                                    </div>
-                                </div>
-                            </td>
-                            <th>생년월일</th>
-                            <td>
-                                <input type="text">
-                            </td>
-                            <th>성명</th>
-                            <td><input type="text"></td>
-                        </tr>
-                        <tr>
-                            <th>행정기관</th>
-                            <td>
-                                <div class="sel_wrap">
-                                    <span class="sel">
-                                        <select>
-                                            <option selected="selected">전체</option>
-                                            <option>1호</option>
-                                            <option>2호</option>
-                                        </select>
-                                    </span>
-                                    <span class="sel">
-                                        <select>
-                                            <option selected="selected">전체</option>
-                                            <option>1호</option>
-                                            <option>2호</option>
-                                        </select>
-                                    </span>
-                                </div>
-                            </td>
-                            <th>증상태</th>
-                            <td>
-                                <span class="sel block">
-                                    <select>
-                                        <option selected="selected">전체</option>
-                                        <option>1호</option>
-                                        <option>2호</option>
-                                    </select>
-                                </span>
-                            </td>
-                            <th>결과</th>
-                            <td>
-                                <span class="sel block">
+                            <th>상위코드<span class="ico-essential">*</span></th>
+                            <td colspan="3">
+                               <span class="sel">
                                     <select>
                                         <option selected="selected">전체</option>
                                         <option>1호</option>
@@ -191,8 +140,42 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>서비스 상태</th>
-                            <td colspan="5">
+                            <th>연계기관코드<span class="ico-essential">*</span></th>
+                            <td>
+                                <span class="box_input-type">
+                                    <input type="text">
+                                </span>
+                            </td>
+                            <th>연계기관코드명<span class="ico-essential">*</span></th>
+                            <td>
+                                <span class="box_input-type">
+                                    <input type="text">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>연계담당자명<span class="ico-essential">*</span></th>
+                            <td>
+                                <span class="box_input-type">
+                                    <input type="text">
+                                </span>
+                            </td>
+                            <th>연계담당자연락처<span class="ico-essential">*</span></th>
+                            <td>
+                                <span class="box_input-type">
+                                    <input type="text">
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>연계담당자소속<span class="ico-essential">*</span></th>
+                            <td>
+                                <span class="box_input-type">
+                                    <input type="text">
+                                </span>
+                            </td>
+                            <th>연계타입<span class="ico-essential">*</span></th>
+                            <td>
                                 <span class="sel">
                                     <select>
                                         <option selected="selected">전체</option>
@@ -202,92 +185,63 @@
                                 </span>
                             </td>
                         </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                    <div class="search_btn-wrap">
-                        <button type="button" class="btn_basic3">Excel</button>
-                        <button type="button" class="btn_basic3">Excel(전체)</button>
-                        <button type="button" class="btn_basic2">초기화</button>
-                        <button type="button" class="btn_basic1 btn_search"><i class="ico_com"></i>조회</button>
-                    </div>
-                </article>
-
-                <!-- bbs -->
-                <div class="bbs_area">
-                    <table class="bbs">
-                        <colgroup>
-                            <col style="width:6%;">
-                            <col style="width:12%">
-                            <col style="width:8%;">
-                            <col style="width:10%">
-                            <col>
-                            <col style="width:8%;">
-                            <col style="width:6%;">
-                            <col style="width:10%;">
-                            <col style="width:8%;">
-                            <col style="width:10%;">
-                        </colgroup>
-                        <thead>
                         <tr>
-                            <th>번호</th>
-                            <th>주민등록번호</th>
-                            <th>성명</th>
-                            <th>발급일자</th>
-                            <th>행정기관(주거지기준)</th>
-                            <th>증상태</th>
-                            <th>결과</th>
-                            <th>서비스상태</th>
-                            <th>등록일자</th>
-                            <th>최종처리일자</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1120</td>
-                            <td>881012-1******</td>
-                            <td>김길동</td>
-                            <td>2000-0101</td>
-                            <td class="align-l">세통특별자치시</td>
-                            <td>정상</td>
-                            <td>성공</td>
-                            <td>해지</td>
-                            <td>2021-07-26</td>
-                            <td>2021-07-27</td>
+                            <th>연계시작일자<span class="ico-essential">*</span></th>
+                            <td>
+                                <div class="box_datepicker-wrap">
+                                    <span class="datepicker_box type2">
+                                        <input type="text" name="" value="" placeholder="날짜선택" class="datepicker">
+                                    </span>
+                                </div>
+                            </td>
+                            <th>연계종료일자<span class="ico-essential">*</span></th>
+                            <td>
+                                <div class="box_datepicker-wrap">
+                                    <span class="datepicker_box type2">
+                                        <input type="text" name="" value="" placeholder="날짜선택" class="datepicker">
+                                    </span>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="" checked>
+                                        <span>선택</span>
+                                    </label>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>1120</td>
-                            <td>881012-1******</td>
-                            <td>김길동</td>
-                            <td>2000-0101</td>
-                            <td class="align-l">세통특별자치시</td>
-                            <td>정상</td>
-                            <td>성공</td>
-                            <td>일시정지</td>
-                            <td>2021-07-26</td>
-                            <td>2021-07-27</td>
+                            <th>비고</th>
+                            <td colspan="3">
+                                <input type="text">
+                            </td>
                         </tr>
-                        <tr>
-                            <td>1120</td>
-                            <td>881012-1******</td>
-                            <td>김길동</td>
-                            <td>2000-0101</td>
-                            <td class="align-l">세통특별자치시</td>
-                            <td>정상</td>
-                            <td>성공</td>
-                            <td>등록</td>
-                            <td>2021-07-26</td>
-                            <td>2021-07-27</td>
-                        </tr>
-                        <!-- S:등록된 데이터가 없을 경우 -->
-                        <tr>
-                            <td colspan="10" class="no-data">등록된 데이터가 없습니다.</td>
-                        </tr>
-                        <!-- E:등록된 데이터가 없을 경우 -->
                         </tbody>
                     </table>
                 </div>
-                <!-- //bbs -->
+
+                <p class="txt_sub-tit">시스템정보</p>
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>작업자</th>
+                            <td>홍길동</td>
+                            <th>작업일자</th>
+                            <td>2021-06-30</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="btn_wrap">
+                    <button type="button" class="btn_basic3">취소</button>
+                    <button type="button" class="btn_basic1">저장</button>
+                </div>
             </div>
         </section>
     </div>

@@ -62,9 +62,7 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 *, *:before, *:after {box-sizing:border-box}
 
 /* ico sprite */
-.ico_com {display:inline-block;font-size:0;color:transparent;line-height:0;vertical-align:top}
-.ico_com, [type='checkbox']:checked + label:after,
-.sel:after {content:"";display:inline-block;background-image:url('../images/common/ico_com.png');background-size:200px auto;background-repeat:no-repeat;background-position:0 0}
+.ico_com {display:inline-block;font-size:0;color:transparent;line-height:0;vertical-align:top;content:"";background-image:url('../images/common/ico_com.png');background-size:200px auto;background-repeat:no-repeat;background-position:0 0}
 
 /* font size */
 .tit_type1 {font-size:20px}
@@ -79,20 +77,20 @@ header, footer, section, article, aside, nav, address { display:block; margin:0;
 /* align */
 .align-l {text-align:left !important}
 
-
 /* select */
-.sel {position:relative;display:inline-block;min-width:172px;height:36px;background:#fff;vertical-align:top}
+.sel {position:relative;display:inline-block;min-width:160px;height:36px;vertical-align:top}
 .sel_wrap {display:flex}
 .sel_wrap .sel {flex:1}
 .sel ~ .sel {margin-left:5px}
 .sel.block {width:100%}
-.sel:after {display:block;position:absolute;top:50%;right:12px;z-index:2;margin-top:-4px;width:10px;height:8px;background:url("../images/common/ico_sel.png");opacity:.6}
+.sel:after {content:"";display:block;position:absolute;top:50%;right:12px;z-index:2;margin-top:-4px;width:10px;height:8px;background:url("../images/common/ico_sel.png");opacity:.6}
 .sel select {width:100%;height:100%;padding:0 30px 0 12px;background:#fff;color:#666;font-family:'NotoKrR';letter-spacing:-.7px;border:1px solid #ddd;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-webkit-appearance:none;-moz-appearance:none;font-size:14px}
 .sel select:disabled {background-color:#f8f8f8;color:#6e6e6e}
-.sel.small {min-width:98px;height:24px;line-height:24px}
-.sel.small select {font-size:12px}
-.sel.big {height:38px;line-height:38px}
-.sel.big02 {min-width:270px}
+.sel.type2, .sel.type2 select {min-width:100px;background:transparent}
+.sel.type2 select {padding:0 30px 0 0;border:none;color:#222;font-family:'NotoKrM', sans-serif}
+.sel.type2:after {opacity:1}
+.sel.type3, .sel.type3 select {min-width:200px}
+
 select::-ms-expand {display:none}
 select option:disabled {color:#cecfd0}
 
@@ -136,16 +134,16 @@ input.big {width:270px}
 
 /* radio & checkbox */
 .radio input[type='radio']:focus, .checkbox input[type='checkbox']:focus {outline:none}
-.box_radio-group {display:inline-block;margin:10px 14px 0 0;vertical-align:top}
-[class*="radio"], [class*="checkbox"] {display:inline-block;position:relative;margin-left:14px}
+[class*="radio"], [class*="checkbox"] {display:inline-block;position:relative;margin-left:30px}
 .radio:first-child, [class*="checkbox"]:first-child {margin-left:0}
 [class*="radio"] input[type='radio'], [class*="checkbox"] input[type='checkbox'] {position:absolute;top:0;left:0;z-index:1;width:20px;height:20px;vertical-align:middle;opacity:0 !important}
 [class*="radio"] span, [class*="checkbox"] span {position:relative;z-index:1;display:inline-block;padding-left:30px;font-size:14px;line-height:20px;vertical-align:middle;cursor:pointer}
-[class*="radio"] span:before, [class*="checkbox"] span:before {content:'';position:absolute;left:0;top:0;display:inline-block;width:20px;height:20px;background:rgba(255, 255, 255, 0.5);border:1px solid #808191;border-radius:50%;-webkit-transition:.2s ease-out;-moz-transition:.2s ease-out;transition:.2s ease-out}
+[class*="radio"] span:before, [class*="checkbox"] span:before {content:'';position:absolute;left:0;top:0;display:inline-block;width:20px;height:20px;background:#fff;border:1px solid #ccc;border-radius:50%;-webkit-transition:.2s ease-out;-moz-transition:.2s ease-out;transition:.2s ease-out}
 [class*="radio"] span:after, [class*="checkbox"] span:after {content:'';position:absolute;left:5px;top:5px;display:block;width:10px;height:10px}
+[class*="radio"] span:after {background:#ccc;border-radius:50%}
 
-.radio input[type='radio']:checked + span:before {background-color:#fff;border-color:#28b270}
-.radio input[type='radio']:checked + span:after {border-radius:50%;background-color:#28b270}
+.radio input[type='radio']:checked + span:before {background-color:#fff;border-color:#ddd}
+.radio input[type='radio']:checked + span:after {border-radius:50%;background-color:#212b75}
 .radio input[type='radio']:disabled + span, .checkbox input[type='checkbox']:disabled + span {color:#999;cursor:default}
 .radio input[type='radio']:disabled + span:before {background-color:#f8f8f8;border-color:#e5e5e5;cursor:not-allowed}
 .radio input[type='radio']:disabled:checked + span:before {background-color:#f8f8f8;border-color:#b4b4b4;cursor:not-allowed}
@@ -153,12 +151,14 @@ input.big {width:270px}
 .radio.no_label span, .checkbox.no_label span {width:20px;min-height:20px;padding:0;font-size:0;line-height:0}
 
 /* checkbox */
-[class*="checkbox"] span:before {border-radius:2px}
-[class*="checkbox"] span:after {top:4px;left:4px;width:12px;height:12px;opacity:0;z-index:1;-webkit-transition:opacity .2s ease-out;-moz-transition:opacity .2s ease-out;transition:opacity .2s ease-out;-webkit-transition-delay:-webkit-calc(.2s/2);-moz-transition-delay:-moz-calc(.2s/2);transition-delay:calc(.2s / 2)}
-.checkbox input[type='checkbox']:checked + span:before {border-color:#28b270;background-color:#28b270;border-width:9px}
-.checkbox input[type='checkbox']:checked + span:after {background:url('../images/common/checkbox-check.svg') 0 0 no-repeat;opacity:1}
+[class*="checkbox"] span:before {border-radius:0}
+[class*="checkbox"] span:after {top:5px;left:2px;width:16px;height:12px;z-index:1;-webkit-transition:opacity .2s ease-out;-moz-transition:opacity .2s ease-out;transition:opacity .2s ease-out;-webkit-transition-delay:-webkit-calc(.2s/2);-moz-transition-delay:-moz-calc(.2s/2);transition-delay:calc(.2s / 2);background:url('../images/common/ico_check-disabled.svg') 0 0 no-repeat}
+.checkbox input[type='checkbox']:checked + span:before {border-color:#ccc;background-color:#fff}
+.checkbox input[type='checkbox']:checked + span:after {background:url('../images/common/ico_check.svg') 0 0 no-repeat;opacity:1}
 .checkbox input[type='checkbox']:disabled + span:before {background-color:#ddd;border-color:#ccc;cursor:not-allowed}
 .checkbox input[type='checkbox']:disabled:checked + span:before {background-color:#ddd}
+
+.box_input-type {display:block;width:160px}
 
 /* paging */
 .box_paging-wrap {display:flex;justify-content:flex-end;align-items:center;height:60px;padding:10px 22px;color:#808191;font-size:12px;background-color:#fff}
@@ -179,24 +179,33 @@ input.big {width:270px}
 .box_paging .btn_page[class*='prev']:disabled:hover, .box_paging .btn_page[class*='next']:disabled:hover {background-color:transparent}
 .box_paging .btn_page:disabled, .box_paging .btn_page:disabled:hover {opacity:.4;cursor:default}
 
-/* form */
-
 /* 첨부파일 */
+.box_file-upload .txt_noti {color:#e2483c;margin-left:12px;display:inline-block}
+.box_file-data {display:inline-flex;align-items:center}
+.box_file-data .txt {color:#212b75;text-decoration:underline}
+.box_file-data .txt .data {display:inline-block;margin-left:2px;color:#999;text-decoration:none}
+.box_file-data .btn_delete {margin-left:10px}
 
-/* datepicker */
-.box_datepicker-area {display:inline-block;vertical-align:middle}
-.datepicker_box {position:relative;display:inline-block;background-color:#fff;font-size:0;vertical-align:top}
-.datepicker_box input[type='text'] {vertical-align:middle}
-.datepicker_box input[disabled='disabled'], .datepicker_box input[disabled] {background-color:#fff}
-.btn_calendar {margin-left:4px;font-size:0;line-height:0;color:transparent;vertical-align:middle}
-.btn_calendar .ico_com {width:26px;height:26px;background-position:0 -78px}
-.txt_date-line {display:inline-block;margin:6px 8px 0 6px;font-size:16px;color:#6e6e6e;vertical-align:top}
+/* form */
+.box_form {display:flex;align-items:center}
+.box_form input[type='text'] {margin-right:16px;flex:1}
+.box_form .box_radio-group {margin:0 30px 0 0}
+.box_form .datepicker_box {width:160px}
+.box_sel-group {display:inline-flex;align-items:center}
+.box_sel-group .sel ~ .sel {margin:0}
+
+.box_check-view {display:inline-flex;align-items:center}
+.box_check-view .check-item {position:relative;padding-left:22px}
+.box_check-view .check-item + .check-item {margin-left:26px}
+.box_check-view .check-item:before {content:'';display:block;position:absolute;left:0;top:2px;width:16px;height:12px;background:url('../images/common/ico_check.svg') 0 0 no-repeat}
+.box_check-view .check-item.is-disabled:before {background:url('../images/common/ico_check-disabled.svg') 0 0 no-repeat}
+
 
 /* button */
 button[class*="btn_basic"],
 a[class*="btn_basic"] {display:inline-block;min-width:80px;padding:0 20px;height:36px;line-height:34px;text-align:center;font-size:14px;font-weight:normal;border-radius:4px;color:#fff;border:1px solid transparent;letter-spacing:-.7px}
 button[class*="btn_basic"].small,
-a[class*="btn_basic"].small {padding:0 10px}
+a[class*="btn_basic"].small {padding:0 10px;min-width:60px;height:28px;line-height:26px}
 button[class*="btn_basic"].big,
 a[class*="btn_basic"].big {padding:0 34px}
 
@@ -213,11 +222,13 @@ button.btn_basic3:disabled {color:#8b2626;background-color:#b35c5c}
 [class*="btn_basic"] ~ [class*="btn_basic"] {margin-left:5px}
 
 .btn_search .ico_com {position:relative;top:8px;margin-right:4px;width:16px;height:16px;background-position:-48px 0}
+.btn_wrap {margin-top:40px;display:flex;align-items:center;justify-content:center}
+.btn_delete {width:14px;height:14px;background:url("../images/common/btn_del.svg") 0 0 no-repeat}
 
 /* layout */
-.wrapper {}
+.wrapper {min-width:1600px}
 .layout_wrap {position:relative}
-.header {position:relative;height:108px;background:#212b75;}
+.header {position:relative;height:108px;background:#212b75}
 .header h1 {padding:20px 24px;font-size:20px;font-family:'NotoKrB';color:#fff}
 .gnb_menu {display:flex;align-items:center;background:#162067}
 .gnb_menu li:hover, .gnb_menu li.active {background:#08114e}
@@ -261,10 +272,7 @@ button.btn_basic3:disabled {color:#8b2626;background-color:#b35c5c}
 .depth_list .depth_list-btn {display:block;position:relative;padding-left:10px;font-size:14px;line-height:1;color:#666}
 .depth_list .depth_list-btn:before {content:'';display:block;position:absolute;left:0;top:8px;width:4px;height:1px;background:#aaa}
 
-
-
 .contents_inner {flex:1;padding:24px 48px}
-
 
 .box_bread-crumb {display:flex;align-items:center;position:relative;margin-bottom:28px}
 .box_bread-crumb .tit_type1 {display:inline-block;line-height:36px;font-size:24px;font-family:'NotoKrB';color:#222;letter-spacing:-1.2px}
@@ -273,8 +281,55 @@ button.btn_basic3:disabled {color:#8b2626;background-color:#b35c5c}
 .bread_crumb li:before {content:'';display:block;position:absolute;left:0;top:0;width:14px;height:14px;background:url("../images/common/ico_com.png") -14px -16px}
 .bread_crumb .home {padding-left:20px;margin:0}
 .bread_crumb .home:before {background-position:0 -16px}
-.bread_crumb .current {color:#222}
+.bread_crumb .current {color:#222;font-weight:600}
 .box_bread-crumb .align-right {position:absolute;right:0;top:0}
 
 
-/* gnb */
+/* datepicker */
+.ui-widget.ui-widget-content {position:absolute !important;z-index:20 !important;margin-top:8px;border:1px solid #ddd !important}
+.ui-datepicker {background-color:#fff}
+.ui-datepicker {width:264px;background-color:#fff}
+.ui-datepicker .ui-widget-header {background-color:transparent;border-color:transparent}
+.ui-datepicker .ui-state-default,
+.ui-datepicker .ui-widget-content .ui-state-default {font-size:14px;border-color:transparent}
+.ui-datepicker-unselectable .ui-state-disabled {background-color:transparent}
+.ui-datepicker-unselectable.ui-state-disabled .ui-state-default {opacity:.3}
+.ui-datepicker-calendar .ui-state-active,
+.ui-datepicker-calendar .ui-widget-content .ui-state-active {height:30px;background-color:#2f67a2;border-color:#2f67a2;color:#fff}
+.ui-datepicker-calendar .ui-state-highlight,
+.ui-datepicker-calendar .ui-widget-content .ui-state-highlight,
+.ui-datepicker-calendar .ui-widget-header .ui-state-highlight {height:30px;color:#333;border:2px solid #c4161c;background-color:transparent}
+.ui-datepicker .ui-state-default.ui-state-hover,
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default.ui-state-active {color:#fff !important;background-color:#55b3d6;border-color:#55b3d6}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight,
+.ui-datepicker .ui-state-highlight.ui-state-hover {color:#333 !important;border:2px solid #55b3d6 !important;background-color:transparent !important}
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-default {color:#ff5959}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {display:none}
+.ui-datepicker .ui-datepicker-title {position:relative}
+.ui-datepicker .ui-datepicker-title:after,
+.ui-datepicker .ui-datepicker-title:before {content:'';position:absolute;top:50%;right:12px;z-index:2;display:block;margin-top:-4px;width:10px;height:8px;background:url(../images/common/ico_sel.png);opacity:.6}
+.ui-datepicker .ui-datepicker-title:before {left:92px}
+.ui-datepicker .ui-datepicker-title:after {right:16px}
+.ui-datepicker .ui-datepicker-title select {width:80px;height:32px;color:#666;background:transparent;border:1px solid #cbccce;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-appearance:none;-moz-appearance:none;padding:0 24px 0 10px}
+.ui-datepicker .ui-datepicker-title select:disabled{background:#f5f5f5;border-color:#ddd;color:#666}
+.ui-widget-overlay {cursor:pointer}
+
+.box_datepicker-wrap {display:flex;align-items:center}
+.datepicker_box {position:relative;display:inline-block}
+.datepicker_box .datepicker {padding-right:34px}
+.datepicker_box .ui-datepicker-trigger {position:absolute;right:0;top:50%;width:100%;height:34px;margin-top:-17px;font-size:0}
+.datepicker_box .ui-datepicker-trigger:after {content:'';position:absolute;top:50%;right:10px;width:19px;height:20px;margin-top:-10px;background:url(../images/common/btn_calendar.svg);}
+.datepicker_box.disabled input {background-color:#eee;border:1px solid #ddd;border-radius:4px;color:#666;opacity:1}
+.datepicker_box.type2 {width:160px}
+
+.datepicker_box.disabled .ui-datepicker-trigger:after {opacity:.4}
+input.datepicker[disabled='disabled']::-webkit-input-placeholder,
+input.datepicker[disabled]::-webkit-input-placeholder {background-color:#fff;color:#999;opacity:1}
+.btn_datepicker-wrap {margin-left:5px}
+
+.box_datepicker-area {display:inline-block;vertical-align:middle}
+.btn_calendar {margin-left:4px;font-size:0;line-height:0;color:transparent;vertical-align:middle}
+.btn_calendar .ico_com {width:26px;height:26px;background-position:0 -78px}
+.txt_date-line {display:inline-block;margin:6px 8px 0 6px;font-size:16px;color:#6e6e6e;vertical-align:top}
+

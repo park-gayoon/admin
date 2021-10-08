@@ -6,6 +6,7 @@
     <title>비대면 사실조사 시스템</title>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/contents.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
     <script src="../js/jquery-1.12.4.min.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script src="../js/common.js"></script>
@@ -107,17 +108,20 @@
 
             <div class="contents_inner">
                 <div class="box_bread-crumb">
-                    <h2 class="tit_type1">비대면 사실조사 결과확인</h2>
+                    <h2 class="tit_type1">활용처 상세</h2>
                     <ul class="bread_crumb">
                         <li class="home">비대면 사실조사 시스템</li>
                         <li>비대면 사실조사 결과확인</li>
-                        <li class="current">상세</li>
+                        <li class="current">활용처관리 상세</li>
                     </ul>
-                    <button type="button" class="align-right btn_basic3">목록</button>
+                    <div class="align-right">
+                        <button type="button" class="btn_basic3">목록</button>
+                        <button type="button" class="btn_basic1">수정</button>
+                    </div>
+
                 </div>
 
                 <p class="txt_sub-tit">기본정보</p>
-                <!-- bbs -->
                 <div class="bbs_area">
                     <table class="bbs view">
                         <colgroup>
@@ -128,149 +132,58 @@
                         </colgroup>
                         <tbody>
                         <tr>
-                            <th>주민등록번호</th>
-                            <td>550101-1870912</td>
-                            <th>성명</th>
+                            <th>활용처명<span class="ico-essential">*</span></th>
+                            <td>주민센터</td>
+                            <th>표시여부<span class="ico-essential">*</span></th>
+                            <td>
+                               <div class="box_check-view">
+                                   <span class="check-item">표시</span>
+                                   <span class="check-item is-disabled">표시안함</span>
+                               </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>안내문구<span class="ico-essential">*</span></th>
+                            <td colspan="3">주민센터에서 QR코드를 제출하여 본인확인을 하세요.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>로고<span class="ico-essential">*</span></th>
+                            <td colspan="3">
+                                <div class="box_file-data">
+                                    <span class="txt">첨부파일입니다.jpg</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>로고 이미지</th>
+                            <td colspan="3">
+                                <img src="https://dummyimage.com/80x80/dddddd/fff" alt="로고이미지">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="txt_sub-tit">시스템정보</p>
+                <div class="bbs_area">
+                    <table class="bbs view">
+                        <colgroup>
+                            <col style="width:12%;">
+                            <col>
+                            <col style="width:12%;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th>작업자</th>
                             <td>홍길동</td>
-                        </tr>
-                        <tr>
-                            <th>증발급일자</th>
-                            <td>2020-01-01</td>
-                            <th>행정기관</th>
-                            <td>세종특별자치시</td>
-                        </tr>
-                        <tr>
-                            <th>증상태</th>
-                            <td>정상</td>
-                            <th>현주소</th>
-                            <td>세종특별자치시 도렴동 홍길동 아파트 101동 1111호</td>
+                            <th>작업일자</th>
+                            <td>2021-06-30</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
-                <!-- //bbs -->
-
-                <p class="txt_sub-tit">서비스정보</p>
-                <!-- bbs -->
-                <div class="bbs_area">
-                    <table class="bbs view">
-                        <colgroup>
-                            <col style="width:12%;">
-                            <col>
-                            <col style="width:12%;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                        <tr>
-                            <th>증연계이력</th>
-                            <td>2021-07-26</td>
-                            <th>해지일자</th>
-                            <td>-</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- //bbs -->
-
-                <p class="txt_sub-tit">증연계이력</p>
-                <!-- bbs -->
-                <div class="bbs_area">
-                    <table class="bbs">
-                        <colgroup>
-                            <col style="width:8%;">
-                            <col style="width:15%">
-                            <col style="width:10%;">
-                            <col style="width:10%">
-                            <col>
-                        </colgroup>
-                        <thead>
-                        <tr>
-                            <th>번호</th>
-                            <th>처리일자</th>
-                            <th>서비스상태</th>
-                            <th>인증결과</th>
-                            <th>연계설명</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>7</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2021-07-31 09:00:00</td>
-                            <td>해지</td>
-                            <td>성공</td>
-                            <td class="align-l">이용기관코드 오류</td>
-                        </tr>
-                        <!-- S:등록된 데이터가 없을 경우 -->
-                        <tr>
-                            <td colspan="5" class="no-data">등록된 데이터가 없습니다.</td>
-                        </tr>
-                        <!-- E:등록된 데이터가 없을 경우 -->
-                        </tbody>
-                    </table>
-
-                    <!-- 페이징 -->
-                    <div class="bbs_page">
-                        <button type="button" class="btn_page first" disabled>처음</button>
-                        <button type="button" class="btn_page prev" disabled>이전</button>
-                        <span class="paging_group">
-                            <button type="button" class="btn_page active">1</button>
-                            <button type="button" class="btn_page">2</button>
-                            <button type="button" class="btn_page">3</button>
-                            <button type="button" class="btn_page">4</button>
-                            <button type="button" class="btn_page">5</button>
-                            <button type="button" class="btn_page">6</button>
-                            <button type="button" class="btn_page">7</button>
-                            <button type="button" class="btn_page">8</button>
-                            <button type="button" class="btn_page">9</button>
-                            <button type="button" class="btn_page">10</button>
-                        </span>
-                        <button type="button" class="btn_page next">다음</button>
-                        <button type="button" class="btn_page last">끝</button>
-                    </div>
-                </div>
-                <!-- //bbs -->
             </div>
         </section>
     </div>
